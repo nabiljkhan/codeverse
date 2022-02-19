@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.pane {
+  display: flex;
+  height: 50vh;
+}
+.editor-container {
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-direction: column;
+  padding: 0.5rem;
+  display: flex;
+  background-color: hsla(118, 90%, 30%, 0.753);
+}
+.editor-container.collapsed {
+  flex-grow: 0;
+}
+.editor-container.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+
+.expand-collapse-btn {
+  margin-left: 0.5rem;
+  background: none;
+  color: hsl(118, 90%, 49%);
+  cursor: pointer;
+  border: none;
+}
+.editor-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 0%);
+  color: hsl(118, 90%, 49%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.CodeMirror {
+  height: 100% !important;
+}
+
+.code-mirror-wrapper {
+  flex-grow: 1;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  overflow: hidden;
+}
